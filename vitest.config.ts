@@ -1,10 +1,10 @@
-import vue from '@vitejs/plugin-vue';
 import path from 'path';
-import { defineConfig } from 'vite';
+import { defineConfig } from 'vitest/config';
 
 export default defineConfig({
-  plugins: [vue()],
-  resolve: {
+  test: {
+    environment: 'jsdom',
+    globals: true,
     alias: {
       '@domain': path.resolve(__dirname, 'src/@domain'),
       '@application': path.resolve(__dirname, 'src/@application'),
@@ -12,5 +12,6 @@ export default defineConfig({
       '@presentation': path.resolve(__dirname, 'src/@presentation'),
       '@shared': path.resolve(__dirname, 'src/@shared'),
     },
+    testTimeout: 10000, // 10 secondes pour chaque test
   },
 });

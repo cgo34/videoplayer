@@ -1,5 +1,6 @@
 import { InitPlayerUseCase } from '@application/video/useCases/InitPlayerUseCase'
 import { LoadVideoUseCase } from '@application/video/useCases/LoadVideoUseCase'
+import { PlayVideoUseCase } from '@application/video/useCases/PlayVideoUseCase'
 import { TogglePlaybackUseCase } from '@application/video/useCases/TogglePlaybackUseCase'
 import { container } from '@shared/ioc/container'
 import { TYPES } from '@shared/ioc/symbols'

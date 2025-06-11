@@ -12,6 +12,8 @@ dist/
 
 # Vue.js
 *.local
+.env*
+!.env.example
 
 # TypeScript
 *.tsbuildinfo
